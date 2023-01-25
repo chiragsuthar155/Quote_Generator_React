@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Kanit", sans-serif;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+
+  /* background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.2)),
+    url("./images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: rgba(32, 38, 50, 255);
+  text-align: center;
+}
+
+.card {
+  /* background-color: rgba(244, 208, 150, 255); */
+  background-color: white;
+  width: 32%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem 1.9rem;
+  border-radius: 4px;
+}
+
+.advice_id {
+  margin-bottom: 20px;
+  color: rgba(240, 137, 118, 255);
+  font-size: 1.1rem;
+}
+
+.heading {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.heading img {
+  position: relative;
+  top: -10px;
+  height: 15px;
+}
+
+.left-quote {
+  right: 5px;
+}
+
+.right-quote {
+  left: 5px;
+}
+
+.button {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  margin-bottom: 10px;
+  opacity: 1;
+  background-color: rgba(83, 114, 239, 255);
+  border: 1px solid rgba(22, 76, 167, 0.6);
+}
+
+.button span {
+  color: whitesmoke;
+  font-size: 12px;
+  font-weight: 530;
+  letter-spacing: 0.7px;
+}
+
+.round_icon {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 2px solid rgba(83, 114, 239, 255);
+  border-radius: 32px;
+  cursor: pointer;
+  transition: all 0.8s ease-in;
+}
+
+.round_icon + .round_icon {
+  margin-left: 10px;
+}
+
+.share-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid grey;
+  width: 60%;
+  margin: 10px 0px;
+  padding: 10px 0px;
+}
+
+.share-icon img {
+  height: 29px;
+}
+
+.button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+
+.button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    padding: 0.7rem 1.5rem;
+  }
+  .button span {
+    font-size: 9px;
+  }
+
+  .share-icon img {
+    height: 20px;
+  }
+
+  .card {
+    width: 80%;
+    height: 50%;
+  }
+}
